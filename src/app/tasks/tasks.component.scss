@@ -33,11 +33,11 @@
 .todo
 {
     width: 100%;
-    padding: 16px 0 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin: 4px 0 4px 0;
     display: flex;
     flex-wrap: wrap;
-    //color: #757575;
     color: #000000;
     border-radius: 5px;
 
@@ -59,9 +59,20 @@
         p
         {
             padding-bottom: 1rem;
+            padding-top: 5px;
             font-size: 1.5rem;
+            &.del_panding
+            {
+                text-decoration: line-through;
+                font-family: Roboto-Medium;
+                color: #9B9B9B;
+            }
         }
-        span { padding-right: 1rem; }
+        span
+        {
+            padding-right: 1rem;
+            color: #757575;
+        }
     }
     .editcard
     {
@@ -93,14 +104,45 @@
             padding-left: 1rem;
         }
     }
+    .actionarea
+    {
+        display: flex;
+        width: 100%;
+        border-radius: 5px;
+        justify-content: space-around;
+        button
+        {
+            font-family: "Roboto-Regular", sans-serif;
+            width:100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            text-align: center;
+            font-size: 24px;
+            border:0;
+            &.cancel
+            {
+                background: #FFFFFF;
+                color: #D0021B;
+            }
+            &.save
+            {
+                background: #4A90E2;
+                color: #FFFFFF;
+            }
+        }
+    }
 
     &.editing
     {
         background-color: #F2F2F2;
+        padding-bottom: 0;
         .maincard
         {
-            // font-size: 2rem;
             span{ display: none; }
+        }
+        .editcard
+        {
+            .fa-pencil-alt{ color: #4A90E2; }
         }
     }
     &.starred
@@ -112,4 +154,12 @@
             .far.fa-star{ display: none; }
         }
     }
+}
+
+p.info
+{
+    margin-left: 1rem;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 24px;
+    color: #C8C8C8;
 }
