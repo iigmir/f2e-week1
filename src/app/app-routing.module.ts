@@ -8,7 +8,7 @@ import { TasksComponent } from './tasks/tasks.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: '/tasks', pathMatch: 'full' },
+    { path: '', redirectTo: 'tasks', pathMatch: 'full' },
     { path: 'tasks', component: TasksComponent },
     { path: 'progress', component: ProgressComponent },
     { path: 'completed', component: CompletedComponent },
