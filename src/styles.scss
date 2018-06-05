@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-body
+
+*
 {
-    margin: 0;
-    background-color: #E1E1E1;
+    box-sizing: border-box;
+    font-family: Roboto-Medium;
 }
+
+body, p, input { margin: 0; }
+
+input{ padding: 0; }
+
+body { background-color: #E1E1E1; }
+
+input, textarea { border: 0;border-radius: 2px; }
+
+.hidden { display: none !important; }
