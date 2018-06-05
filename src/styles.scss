@@ -15,3 +15,196 @@ body { background-color: #E1E1E1; }
 input, textarea { border: 0;border-radius: 2px; }
 
 .hidden { display: none !important; }
+
+.panel
+{
+    margin-bottom: 1rem;
+    .add
+    {
+        position: relative;
+        height: 4rem;
+        input
+        {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 5px;
+            padding-left: 5rem;
+            font-size: 30px;
+            &::placeholder
+            {
+                color: #C8C8C8;
+                font-size: 30px;
+            }
+        }
+        .plus
+        {
+            position: absolute;
+            left: 2rem;
+            top: 1.2rem;
+            font-size: 2rem;
+            color: #C8C8C8;
+        }
+    }
+}
+
+.todo
+{
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 4px 0 4px 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000;
+    border-radius: 5px;
+    background: #F2F2F2;
+
+    .checkcard
+    {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        input
+        {
+            border: 0;
+            border-radius: 2px;
+            width:25px;
+            height:25px;
+        }
+    }
+    .maincard
+    {
+        flex-grow:4;
+        p
+        {
+            padding-bottom: 1rem;
+            padding-top: 5px;
+            font-size: 1.5rem;
+            &.del_panding
+            {
+                text-decoration: line-through;
+                font-family: Roboto-Medium;
+                color: #9B9B9B;
+            }
+        }
+        span
+        {
+            padding-right: 1rem;
+            color: #757575;
+        }
+    }
+    .editcard
+    {
+        flex-grow:1;
+        i{ margin-right: 1rem; }
+        .fas.fa-star{ display: none; }
+    }
+
+    .editarea
+    {
+        border-top: 2px solid #C8C8C8;
+        margin-top: 1rem;
+        padding: 1rem 0 0 4rem;
+        flex: 0 0 100%;
+
+        input,
+        textarea
+        {
+            margin: 1rem;
+        }
+
+        button { margin: 1rem; }
+
+        input
+        {
+            height: 2rem;
+            width: 10rem;
+            border: 0;
+            padding-left: 1rem;
+        }
+
+        textarea
+        {
+            width: 22rem;
+            height: 10rem;
+            padding: 1rem;
+        }
+
+        .file button
+        {
+            background: #C8C8C8;
+            border-radius: 2px;
+            color: #FFFFFF;
+            border: 0;
+            width:2rem;
+            height:2rem;
+            &:hover{ background-color: #4A90E2; }
+        }
+    }
+    .actionarea
+    {
+        display: flex;
+        width: 100%;
+        border-radius: 5px;
+        justify-content: space-around;
+        button
+        {
+            font-family: "Roboto-Regular", sans-serif;
+            width:100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            text-align: center;
+            font-size: 24px;
+            border:0;
+            &.cancel
+            {
+                background: #FFFFFF;
+                color: #D0021B;
+            }
+            &.save
+            {
+                background: #4A90E2;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &.editing
+    {
+        background-color: #F2F2F2;
+        padding-bottom: 0;
+        margin-bottom: 1rem;
+        .maincard
+        {
+            span{ display: none; }
+        }
+        .editcard
+        {
+            .fa-pencil-alt{ color: #4A90E2; }
+        }
+        .actionarea
+        {
+            //border-radius: 0 0 5px 5px;
+            .cancel{ border-radius:0 0 0 5px; }
+            .save{ border-radius:0 0 5px 0; }
+        }
+    }
+    &.starred
+    {
+        background-color: #FFF2DC;
+        .editcard
+        {
+            .fas.fa-star{ display: inline; color: #F5A623; }
+            .far.fa-star{ display: none; }
+        }
+        .editarea { background-color: #F2F2F2; }
+    }
+}
+
+p.info
+{
+    margin-left: 1rem;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 24px;
+    color: #C8C8C8;
+}
