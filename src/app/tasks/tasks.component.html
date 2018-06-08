@@ -1,9 +1,9 @@
-<div class="editing todo">
+<div class="todo" *ngFor="let t of todos">
     <div class="checkcard">
         <input type="checkbox">
     </div>
     <div class="maincard">
-        <p> Type something here </p>
+        <p> {{ t.todo }} </p>
         <span>
             <i class="fas fa-calendar-alt"></i>
         </span>
@@ -43,167 +43,217 @@
     </div>
 </div>
 
-<div class="starred todo">
-    <div class="checkcard">
-        <input type="checkbox">
-    </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span>
-            <i class="fas fa-calendar-alt"></i>
-            5 / 14
-        </span>
-        <span>
-            <i class="far fa-file"></i>
-        </span>
-        <span>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
+<div hidden>
 
-<div class="starred todo">
-    <div class="checkcard">
-        <input type="checkbox">
-    </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span hidden>
-            <i class="fas fa-calendar-alt"></i>
-        </span>
-        <span>
-            <i class="far fa-file"></i>
-        </span>
-        <span>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
 
-<div class="todo">
-    <div class="checkcard">
-        <input type="checkbox">
+    <div class="editing todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here </p>
+            <span>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
+        <div class="editarea">
+            <div class="bdy">
+                <div class="deadline">
+                    <p> <i class="fas fa-calendar-alt"></i> Deadline </p>
+                    <input type="date" />
+                    <input type="time" />
+                </div>
+                <div class="file">
+                    <p> <i class="far fa-file"></i> File </p>
+                    <button> <i class="fas fa-plus"></i> </button>
+                </div>
+                <div class="comment">
+                    <p> <i class="fas fa-comment"></i> Comment </p>
+                    <textarea name="" id="" placeholder="Type your memo here…"></textarea>
+                </div>
+            </div>
+            <div class="btn"></div>
+        </div>
+        <div class="actionarea">
+            <button class="cancel"> X Cancel </button>
+            <button class="save"> + Add Task </button>
+        </div>
     </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span>
-            <i class="fas fa-calendar-alt"></i>
-            2019/6/18
-        </span>
-        <span hidden>
-            <i class="far fa-file"></i>
-        </span>
-        <span hidden>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
 
-<div class="todo">
-    <div class="checkcard">
-        <input type="checkbox">
+    <div class="starred todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span>
+                <i class="fas fa-calendar-alt"></i>
+                5 / 14
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span hidden>
-            <i class="fas fa-calendar-alt"></i>
-        </span>
-        <span>
-            <i class="far fa-file"></i>
-        </span>
-        <span hidden>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
 
-<div class="todo">
-    <div class="checkcard">
-        <input type="checkbox" checked>
+    <div class="starred todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span hidden>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
-    <div class="maincard">
-        <p class="del_panding"> Type something here... </p>
-        <span hidden>
-            <i class="fas fa-calendar-alt"></i>
-        </span>
-        <span hidden>
-            <i class="far fa-file"></i>
-        </span>
-        <span hidden>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
 
-<div class="todo">
-    <div class="checkcard">
-        <input type="checkbox">
+    <div class="todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span>
+                <i class="fas fa-calendar-alt"></i>
+                2019/6/18
+            </span>
+            <span hidden>
+                <i class="far fa-file"></i>
+            </span>
+            <span hidden>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span>
-            <i class="fas fa-calendar-alt"></i>
-        </span>
-        <span>
-            <i class="far fa-file"></i>
-        </span>
-        <span>
-            <i class="fas fa-comment"></i>
-        </span>
-    </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
-    </div>
-</div>
 
-<div class="todo">
-    <div class="checkcard">
-        <input type="checkbox">
+    <div class="todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span hidden>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span hidden>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
-    <div class="maincard">
-        <p> Type something here... </p>
-        <span>
-            <i class="fas fa-calendar-alt"></i>
-        </span>
-        <span>
-            <i class="far fa-file"></i>
-        </span>
-        <span>
-            <i class="fas fa-comment"></i>
-        </span>
+
+    <div class="todo">
+        <div class="checkcard">
+            <input type="checkbox" checked>
+        </div>
+        <div class="maincard">
+            <p class="del_panding"> Type something here... </p>
+            <span hidden>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span hidden>
+                <i class="far fa-file"></i>
+            </span>
+            <span hidden>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
-    <div class="editcard">
-        <i class="fas fa-star fa-2x"></i>
-        <i class="far fa-star fa-2x"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
+
+    <div class="todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
     </div>
+
+    <div class="todo">
+        <div class="checkcard">
+            <input type="checkbox">
+        </div>
+        <div class="maincard">
+            <p> Type something here... </p>
+            <span>
+                <i class="fas fa-calendar-alt"></i>
+            </span>
+            <span>
+                <i class="far fa-file"></i>
+            </span>
+            <span>
+                <i class="fas fa-comment"></i>
+            </span>
+        </div>
+        <div class="editcard">
+            <i class="fas fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="fas fa-pencil-alt fa-2x"></i>
+        </div>
+    </div>
+
 </div>
 
 <p class="info"> <i> 6 tasks left </i> </p>

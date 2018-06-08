@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
     constructor( private service: TodoService ) { }
     ngOnInit() {
         this.todos = this.service.getTodos();
-        console.log( this.todos );
+        // console.log( this.todos );
     }
     logIt() {
         console.log('Hello');

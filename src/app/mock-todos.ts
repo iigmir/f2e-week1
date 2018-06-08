@@ -21,8 +21,8 @@ export const TODOS: Todo[] = [{
     }, {
         satrred: false,
         priority: 2,
-        comment: 'Type something here',
-        todo: null,
+        comment: null,
+        todo: 'Type something here',
         date: '2018-06-30',
         time: null,
         file: null,
@@ -30,8 +30,8 @@ export const TODOS: Todo[] = [{
     }, {
         satrred: false,
         priority: 3,
-        comment: 'TypeScript',
-        todo: null,
+        comment: null,
+        todo: 'TypeScript',
         date: null,
         time: null,
         file: 'foo',
@@ -39,8 +39,8 @@ export const TODOS: Todo[] = [{
     }, {
         satrred: false,
         priority: 3,
-        comment: 'Type some JScript',
-        todo: null,
+        comment: null,
+        todo: 'Type some JScript',
         date: null,
         time: null,
         file: null,
