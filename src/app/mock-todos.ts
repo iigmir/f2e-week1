@@ -1,7 +1,7 @@
 import { Todo } from './todo';
 
 export const TODOS: Todo[] = [{
-        satrred: true,
+        starred: true,
         priority: 0,
         comment: 'Type something comment',
         todo: 'Type something here...',
@@ -10,7 +10,7 @@ export const TODOS: Todo[] = [{
         file: 'foo/bar',
         completed: false
     }, {
-        satrred: true,
+        starred: true,
         priority: 1,
         comment: 'Another',
         todo: 'Yet another todos.',
@@ -19,7 +19,7 @@ export const TODOS: Todo[] = [{
         file: 'foo/bar/baz',
         completed: false
     }, {
-        satrred: false,
+        starred: false,
         priority: 2,
         comment: null,
         todo: 'Type something here',
@@ -28,7 +28,7 @@ export const TODOS: Todo[] = [{
         file: null,
         completed: false
     }, {
-        satrred: false,
+        starred: false,
         priority: 3,
         comment: null,
         todo: 'TypeScript',
@@ -37,7 +37,7 @@ export const TODOS: Todo[] = [{
         file: 'foo',
         completed: false
     }, {
-        satrred: false,
+        starred: false,
         priority: 3,
         comment: null,
         todo: 'Type some JScript',
@@ -49,7 +49,7 @@ export const TODOS: Todo[] = [{
 ];
 /*
 completed: Boolean;
-    satrred: Boolean;
+    starred: Boolean;
     priority: Number;
     comment: String;
     todo: String;

@@ -1,6 +1,6 @@
 export class Todo {
     completed: Boolean;
-    satrred: Boolean;
+    starred: Boolean;
     priority: Number;
     comment: String;
     todo: String;

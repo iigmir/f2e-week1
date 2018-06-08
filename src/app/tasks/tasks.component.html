@@ -1,4 +1,9 @@
-<div class="todo" *ngFor="let t of todos">
+<div
+    *ngFor="let t of todos; let idx = index"
+    [ngClass]="{
+        'starred': t.starred ,
+        'todo' : true
+    }" >
     <div class="checkcard">
         <input type="checkbox">
     </div>
@@ -256,4 +261,4 @@
 
 </div>
 
-<p class="info"> <i> 6 tasks left </i> </p>
+<p class="info"> <i> {{ todos.length }} tasks left </i> </p>
