@@ -9,6 +9,8 @@ import { ProgressComponent } from './progress/progress.component';
 import { ListspaceComponent } from './listspace/listspace.component';
 import { CompletedComponent } from './completed/completed.component';
 
+import { TodoService } from './todo.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { CompletedComponent } from './completed/completed.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

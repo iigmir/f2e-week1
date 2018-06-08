@@ -14,4 +14,12 @@ export class TodoService {
     getTodos(): Todo[] {
         return TODOS;
     }
+    putTodos(): Todo[] {
+        return TODOS;
+        // nevsbds
+    }
+    servInit() {
+        // console.log('Hello');
+        return 'something';
+    }
 }

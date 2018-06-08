@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo';
 
-
 @Component({
     selector: 'app-tasks',
     templateUrl: './tasks.component.html',
@@ -15,8 +14,5 @@ export class TasksComponent implements OnInit {
     ngOnInit() {
         this.todos = this.service.getTodos();
         // console.log( this.todos );
-    }
-    logIt() {
-        console.log('Hello');
     }
 }
