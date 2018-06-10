@@ -2,27 +2,36 @@
     *ngFor="let t of todos; let idx = index"
     [ngClass]="{
         'starred': t.starred ,
-        'todo' : true
+        'todo' : true,
+        'editing' : idx === current_editing
     }" >
     <div class="checkcard">
-        <input type="checkbox">
+        <input type="checkbox" (click)="switchCompleted(idx)" >
     </div>
     <div class="maincard">
-        <p> {{ t.todo }} </p>
-        <span>
+        <p [ngClass]="{ 'del_panding' : t.completed }" > {{ t.todo }} </p>
+        <span *ngIf="t.date !== null">
             <i class="fas fa-calendar-alt"></i>
+            {{ t.date }}
         </span>
-        <span>
+        <span *ngIf="t.file !== null">
             <i class="far fa-file"></i>
+            {{ t.file }}
         </span>
-        <span>
+        <span *ngIf="t.comment !== null">
             <i class="fas fa-comment"></i>
         </span>
     </div>
     <div class="editcard">
-        <i class="fas fa-star fa-2x" (click)="switchStar()"></i>
-        <i class="far fa-star fa-2x" (click)="switchStar()"></i>
-        <i class="fas fa-pencil-alt fa-2x"></i>
+        <i [ngClass]="{
+            'fas': t.starred , 'far': !t.starred,
+            'fa-star' : true , 'fa-2x' : true
+        }" (click)="switchStar(idx)">
+            <!-- Star -->
+        </i>
+        <i class="fas fa-pencil-alt fa-2x" (click)="enableEdit(idx)">
+            <!-- Edit pencil -->
+        </i>
     </div>
     <div class="editarea">
         <div class="bdy">

@@ -14,9 +14,17 @@ export class TodoService {
     getTodos(): Todo[] {
         return TODOS;
     }
-    putTodos(): Todo[] {
+    putTodos( input_object ): Todo[] {
+        const change_index = input_object.change_index;
+        const change_data = input_object.change_data;
+        // console.log( TODOS[ change_index ] );
+        Object.keys( change_data ).forEach( e => {
+            TODOS[ change_index ][ e ] = change_data[ e ];
+        });
         return TODOS;
-        // nevsbds
+    }
+    changeData() {
+        //
     }
     servInit() {
         // console.log('Hello');
